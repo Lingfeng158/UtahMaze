@@ -16,6 +16,7 @@ public class changeDeficit : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
         opaque_mask = gameObject.GetComponent<ScotomaOpaqueMask>();
         blur_mask = gameObject.GetComponent<ScotomaBlur>();
         active_mask_mode = 0;
@@ -24,7 +25,7 @@ public class changeDeficit : MonoBehaviour
 
     public void changeMask(int num)
     {
-
+        Debug.Log("At Change Mask");
         //Texture2D inputTex = (Texture2D)Resources.Load(texImage, typeof(Texture2D));
         //cameraTex = (Texture2D)Resources.Load(texImage, typeof(Texture2D));
         opaque_mask.changeDeficit(num);
@@ -35,6 +36,7 @@ public class changeDeficit : MonoBehaviour
 
     public void activateMaskMode(int num)
     {
+        Debug.Log("At Change Mode");
         // if 0 - nothing
         // if 1 - blur
         // if 2 - mask
